@@ -1,0 +1,22 @@
+body{
+    background-color: white;
+}
+
+.container{
+    display: grid;
+    gap: 4px;
+    max-height: 90vmin;
+    max-width: 90vmin;
+    margin: auto;
+}
+
+.container div::before {
+    content: "";
+    padding-top: 100%;
+    display: block;
+  }
+
+.grid-item{
+    align-self: center;
+    border-radius: 12px;
+}
