@@ -1,21 +1,59 @@
 <!DOCTYPE html>
+
 <head>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap" rel="stylesheet">
     <title>Etch a Sketch</title>
 </head>
+
 <body>
     <h1>Etch a Sketch</h1>
-    <label for="set" id="grid-size"></label>
-    <div class="slider-container">
-        <input type="range" min="2" max="64" value="4" class="slider" id="slider-1">
-    </div>
-    <div class="box-item buttons">
-        <label class="switch ">
-            <input type="checkbox" id="switch-1">
-            <span class="switch-slider"></span>
-        </label>
-        <button id="reset">Reset</button>
+
+    <div class="bar">
+        <div class="bar-left">
+            <label class="switch bar-item">
+                <input type="checkbox" id="switch-1">
+                <span class="switch-slider"></span>
+            </label>
+            <p class="label">Rainbow mode</p>
+        </div>
+
+        <div class="bar-center">
+            <div class="top">
+                <p class="left label">2</p>
+                <input type="range" min="2" max="64" value="4" class="slider" id="slider-1">
+                <p class="right label">64</p>
+            </div>
+            <div class="bottom">
+                <p class="label" id="grid-size">Grid size</p>
+            </div>
+        </div>
+
+        <div class="bar-right">
+            <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 151.02 152.68" class="reset" id="reset">
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                fill: #231f20;
+                            }
+                        </style>
+                    </defs>
+                    <title>Asset 1</title>
+                    <g id="Layer_2" data-name="Layer 2">
+                        <g id="Replay">
+                            <path class="cls-1"
+                                d="M74.68,152.68A76.3,76.3,0,0,1,24.62,134l13.12-15.09a56.34,56.34,0,1,0-7.52-77.14L14.44,29.44A76.34,76.34,0,1,1,74.68,152.68Z" />
+                            <polygon class="cls-1" points="0 17.09 8.34 76.34 55.48 39.5 0 17.09" />
+                        </g>
+                    </g>
+                </svg>
+            </div>
+
+            <p class="label" id="reset-label">Reset</p>
+        </div>
+
+
     </div>
     <div id=main-container class=container></div>
 </body>

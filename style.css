@@ -37,6 +37,7 @@ h1{
     display: inline-block;
     width: 3.5em;
     height: 2em;
+    margin: 10px;
   }
   
   /* Hide default HTML checkbox */
@@ -86,4 +87,76 @@ h1{
     -webkit-transform: translateX(1.45em);
     -ms-transform: translateX(1.45em);
     transform: translateX(1.45em);
+  }
+
+  .slider-container{
+    justify-content: center;
+
+  }
+
+  .bar{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+  }
+
+  .bar-left{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-self: end;
+  }
+
+  .bar-center{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bottom{
+    text-align: center;
+  }
+
+  .switch{
+    margin-left: 1.85em;
+  }
+
+  #reset-label{
+    padding-left: 30px;
+  }
+
+  .reset{
+    width: 48px;
+    height: 48px;
+    padding-left: 30px;
+  }
+  .icon :hover path{
+    fill: #f4acb7;
+    stroke: #f4acb7;
+  }
+  .icon :hover polygon{
+    fill: #f4acb7;
+    stroke: #f4acb7;
+  }
+
+  .icon path{
+    fill:#cccccc;
+  }
+
+  .icon polygon {
+    fill: #cccccc;
+  }
+
+  .slider{
+    width: max(min(calc(80vw - 460px), calc(80vmin - 200px)), 200px);
+  }
+
+  .left, .right{
+    margin: 1em;
   }
