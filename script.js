@@ -6,11 +6,12 @@ let rainbowMode = false;
 const container = document.querySelector('#main-container');
 const reset = document.querySelector('#reset');
 const slider = document.querySelector("#slider-1");
-const gridSize = document.querySelector('#grid-size');
+const gridSizeDoc = document.querySelector('#grid-size');
 const switch1 = document.querySelector('#switch-1');
 
 
 function init() {
+    gridSizeDoc.textContent =`Grid size ${size}`
     // This creates (size * size) number of divs in the container and adds it to the DOM
     for (let i = 0; i < size * size; i++) {
 
@@ -49,7 +50,6 @@ function clear() {
 
 function resize(gridSize){
     size = gridSize;
-    console.log(gridSize)
     while(container.firstChild){
         container.removeChild(container.lastElementChild);
     }
